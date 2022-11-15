@@ -1,4 +1,5 @@
 import React from "react";
+import './Techstack.css'
 import { Col, Row } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg";
 import {
@@ -18,7 +19,7 @@ import {
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons skillbox">
         <CgCPlusPlus />
       </Col>
       <Col xs={4} md={2} className="tech-icons">

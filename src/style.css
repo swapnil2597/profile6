@@ -555,7 +555,7 @@ button:focus {
   margin: 15px !important;
   padding: 10px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  /* border: 1.7px solid rgba(200, 137, 230, 0.637) !important; */
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
@@ -563,6 +563,8 @@ button:focus {
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+  cursor: pointer;
+  background-color: rgba(49, 24, 50, 0.704);
 }
 
 @media (max-width: 767px) {
@@ -574,7 +576,8 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  /* border: 2.2px solid rgba(197, 115, 230, 0.883) !important; */
+  background-color: rgba(128, 27, 131, 0.674) !important;
 }
 .tech-icon-images {
   padding: 20px !important;
