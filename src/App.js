@@ -25,10 +25,10 @@ function App() {
       upadateLoad(false);
     }, 1200);
 
-    // setting website page zoom default to 80% 
-    document.body.style.zoom = "80%";
+    // // setting website page zoom default to 80% 
+    // document.body.style.zoom = "80%";
 
-    
+
     return () => clearTimeout(timer);
   }, []);
 

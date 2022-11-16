@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import Tooltip from '@mui/material/Tooltip';
 // import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
@@ -103,13 +104,16 @@ function NavBar() {
             </Nav.Item> */}
 
             <Nav.Item className="fork-btn">
+              <Tooltip title='visit LinkedIn Profile'>
+
               <Button
                 href="https://www.linkedin.com/in/khareswapnil/"
                 target="_blank"
                 className="fork-btn-inner"
-              >
+                >
                 <AiFillLinkedin style={{ fontSize: "1.2em" }} />
               </Button>
+                </Tooltip>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

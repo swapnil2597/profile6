@@ -559,12 +559,20 @@ button:focus {
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
-  display: table !important;
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
   cursor: pointer;
   background-color: rgba(49, 24, 50, 0.704);
+  flex-direction: column;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  height: 8rem !important;
+}
+
+.techicons_title {
+  font-size: 1rem;
 }
 
 @media (max-width: 767px) {
