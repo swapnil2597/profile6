@@ -6,6 +6,7 @@ import pdf from "../../Assets/../Assets/RESUME_Swapnil_Khare_oct2022.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import { Skeleton } from "@mui/material";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumeLink =
@@ -13,6 +14,11 @@ const resumeLink =
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const [pdfLoading, setPdfLoading] = useState(true);
+
+  function PDFdidMount() {
+    setPdfLoading(false);
+  }
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -35,8 +41,13 @@ function ResumeNew() {
         </Row>
 
         <Row className="resume">
-          <Document file={resumeLink} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          <Document onLoadSuccess={PDFdidMount} file={resumeLink} className="d-flex justify-content-center">
+            {pdfLoading ? 
+              <Skeleton sx={{ bgcolor: '#8a49a810' }} variant="rectangular">
+                <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+              </Skeleton> :
+              <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+            }
           </Document>
         </Row>
 

@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
+import CustomImageList from "../CustomImageList";
 import Particle from "../Particle";
+import QuiltedImageList from "../QuiltedImageList";
 import Home2 from "./Home2";
 import Type from "./Type";
 
@@ -42,6 +44,8 @@ function Home() {
         </Container>
       </Container>
       <Home2 />
+      {/* <CustomImageList /> */}
+      <QuiltedImageList />
     </section>
   );
 }
