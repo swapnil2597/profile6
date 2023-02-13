@@ -7,9 +7,19 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
+function getCurrentMonthYear() {
+  const date = new Date();
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const monthName = months[date.getMonth()];
+  const year = date.getFullYear();
+
+  return `${monthName}, ${year}`;
+}
+
 function Footer() {
   let date = new Date();
-  let year = date.getFullYear();
+  // let year = date.getFullYear();
+  let presentMonthAndYear = getCurrentMonthYear();
   return (
     <Container fluid className="footer">
       <Row>
@@ -17,7 +27,7 @@ function Footer() {
           <h3>SWAPNIL KHARE</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} </h3>
+          <h3>Copyright © {presentMonthAndYear} </h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
