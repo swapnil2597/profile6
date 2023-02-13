@@ -16,13 +16,59 @@ import {
   SiNextdotjs,
 } from "react-icons/si";
 
+const skillsArray = [
+  {
+    icon: <CgCPlusPlus />,
+    skillName: "Skill Name"
+  },
+  {
+    icon: <DiJavascript1 />,
+    skillName: "Skill Name"
+  },
+  {
+    icon: <DiNodejs />,
+    skillName: "Skill Name"
+  },
+  {
+    icon: <DiReact />,
+    skillName: "Skill Name"
+  },
+  {
+    icon: <DiMongodb />,
+    skillName: "Skill Name"
+  },
+  {
+    icon: <SiNextdotjs />,
+    skillName: "Skill Name"
+  },
+  {
+    icon: <DiGit />,
+    skillName: "Skill Name"
+  },
+  {
+    icon: <SiFirebase />,
+    skillName: "Skill Name"
+  },
+  {
+    icon: <DiPython />,
+    skillName: "Skill Name"
+  },
+  {
+    icon: <SiPytorch />,
+    skillName: "Skill Name"
+  },  
+]
+
 function Techstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons skillbox">
-        <CgCPlusPlus />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      {skillsArray.map((e) => (
+        <Col xs={4} md={2} className="tech-icons skillbox">
+          {e.icon}
+          <span className='techicons_title'>{e.skillName}</span>
+        </Col>
+      ))}
+      {/* <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
@@ -48,7 +94,7 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiPytorch />
-      </Col>
+      </Col> */}
     </Row>
   );
 }
