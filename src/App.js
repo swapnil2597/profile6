@@ -25,7 +25,7 @@ function App() {
       upadateLoad(false);
     }, 1200);
 
-    // // setting website page zoom default to 80% 
+    // // setting website page zoom default to 80% - testing vscode.dev online editor 
     // document.body.style.zoom = "80%";
 
 
