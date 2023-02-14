@@ -10,7 +10,7 @@ import { Skeleton } from "@mui/material";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumeLink =
-  "https://raw.githubusercontent.com/swapnil2597/profile5/master/src/Assets/RESUME_Swapnil_Khare_oct2022.pdf";
+  "https://raw.githubusercontent.com/swapnil2597/profile6/main/src/Assets/RESUME_Swapnil_Khare_oct2022.pdf";
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
